@@ -44,7 +44,5 @@ public class Main {
             System.out.println("Ar norite testi darba? y / kitu atveju gali rasyti, bet koki simboli.");
             repeat = S.next().charAt(0);
         } while (repeat == 'y');
-
-        System.out.println("Aciu uz sios programos naudojima.");
     }
 }
