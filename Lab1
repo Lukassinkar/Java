@@ -17,7 +17,7 @@ public class Main {
             num1 = S.nextDouble();
             System.out.println("Iveskite antra skaiciu.");
             num2 = S.nextDouble();
-            System.out.println("Iveskite symboli.");
+            System.out.println("Iveskite simboli.");
             symbol = S.next().charAt(0);
 
             switch (symbol) {
@@ -41,7 +41,7 @@ public class Main {
             }
 
             System.out.println("rezultatas: " + result);
-            System.out.println("Ar norite testi darba? y/n.");
+            System.out.println("Ar norite testi darba? y / kitu atveju gali rasyti, bet koki simboli.");
             repeat = S.next().charAt(0);
         } while (repeat == 'y');
 
