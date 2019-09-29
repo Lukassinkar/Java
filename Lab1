@@ -37,7 +37,7 @@ public class Main {
                     result = num1 / num2;
                     break;
                 default:
-                    System.out.println("Ivestas netinkamas syumbolis.");
+                    System.out.println("Ivestas netinkamas simbolis.");
             }
 
             System.out.println("rezultatas: " + result);
