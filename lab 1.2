@@ -1,3 +1,5 @@
+import javafx.util.Pair;
+
 import java.util.Scanner;
 
 public class Main {
@@ -5,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Skaiciuotuvas.");
 
-        double num1, num2;
+        double num1 = 0, num2 = 0;
         double result = 0;
         char symbol;
         char repeat;
@@ -105,5 +107,18 @@ public class Main {
         double result = num1 * num2;
 
         System.out.println(num1 + " * " + num2 + " = " + result);
+    }
+
+    static void multiplicate(double num1, double num2, double num3) {
+        double result;
+        
+        Scanner S = new Scanner(System.in);
+
+        System.out.println("Iveskite pirma skaiciu.");
+        num3 = S.nextDouble();
+        
+        result = num1 * num2 * num3;
+
+        System.out.println(num1 + " * " + num2 + " * " + num3 + " = " + result);
     }
 }
