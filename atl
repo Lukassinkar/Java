@@ -1,0 +1,34 @@
+    public static void main(String[] args) {
+        double atlyginimas = 0, norma = 0;
+        char normosTipas;
+
+        Scanner S = new Scanner(System.in);
+        System.out.println("Iveskite atlyginima.");
+        atlyginimas = S.nextDouble();
+        System.out.println("Iveskite norma. zemiau (z), norma (n), auksciau (a).");
+        normosTipas = S.next().charAt(0);
+
+        switch (normosTipas) {
+            case 'z':
+                norma = 0.5;
+                break;
+            case 'n':
+                norma = 1;
+                break;
+            case 'a':
+                norma = 1.5;
+                break;
+            default:
+                System.out.println("Ivestas netinkamas simbolis.");
+        }
+
+        grazintiAtlyginma(atlyginimas, norma);
+    }
+
+    public static void grazintiAtlyginma(double atlyginimas, double norma) {
+        double galutinisAtlyginimas = atlyginimas * norma;
+
+        System.out.println("Galutinis atlyginimas = " + galutinisAtlyginimas);
+    }
+    
+}
