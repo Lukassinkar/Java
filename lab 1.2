@@ -3,16 +3,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        double num1 = 0, num2 = 0;
-        double result = 0;
+        double num1, num2, num3, result;
         char symbol;
         char repeat;
-        
+
         System.out.println("Skaiciuotuvas.");
 
-        Scanner S = new Scanner(System.in);
-
         do {
+            Scanner S = new Scanner(System.in);
             System.out.println("Iveskite pirma skaiciu.");
             num1 = S.nextDouble();
             System.out.println("Iveskite antra skaiciu.");
@@ -54,6 +52,12 @@ public class Main {
                         }
                     }
                     break;
+                case '%':
+                    System.out.println("Iveskite trecia skaiciu.");
+                    num3 = S.nextDouble();
+
+                    multiplicate(num1, num2, num3);
+                    break;
                 default:
                     System.out.println("Ivestas netinkamas simbolis.");
             }
@@ -63,12 +67,17 @@ public class Main {
         } while (repeat == 'y');
     }
 
+    /**
+     * Atimtis tarp dvieju skaiciu
+     *
+     * @param num1 - pirmas skaicius
+     * @param num2 - antras skaicius
+     * @return dvieju skaiciu skirtumas
+     */
     static double substract() {
-        double num1, num2;
-        double result;
+        double num1, num2, result;
 
         Scanner S = new Scanner(System.in);
-
         System.out.println("Iveskite pirma skaiciu.");
         num1 = S.nextDouble();
         System.out.println("Iveskite antra skaiciu.");
@@ -79,18 +88,31 @@ public class Main {
         return  result;
     }
 
+    /**
+     * Sudetis tarp dvieju skaiciu
+     *
+     * @param num1 - pirmas skaicius
+     * @param num2 - antras skaicius
+     * @return dvieju skaiciu suma
+     */
     static double add(double num1, double num2) {
         double result = num1 + num2;
 
         return result;
     }
 
+    /**
+     * Dalyba tarp dvieju skaiciu
+     *
+     * @param num1 - pirmas skaicius
+     * @param num2 - antras skaicius
+     * @return dvieju skaiciu dalmuo
+     */
     static void divide() {
         double num1, num2;
         double result;
 
         Scanner S = new Scanner(System.in);
-
         System.out.println("Iveskite pirma skaiciu.");
         num1 = S.nextDouble();
         System.out.println("Iveskite antra skaiciu.");
@@ -101,20 +123,30 @@ public class Main {
         System.out.println(num1 + " / " + num2 + " = " + result);
     }
 
+    /**
+     * Daugyba tarp dvieju skaiciu
+     *
+     * @param num1 - pirmas skaicius
+     * @param num2 - antras skaicius
+     * @return dvieju skaiciu sandauga
+     */
     static void multiplicate(double num1, double num2) {
         double result = num1 * num2;
 
         System.out.println(num1 + " * " + num2 + " = " + result);
     }
 
+    /**
+     * Daugyba tarp dvieju skaiciu
+     *
+     * @param num1 - pirmas skaicius
+     * @param num2 - antras skaicius
+     * @param num3 - trecias skaicius
+     * @return triju skaiciu sandauga
+     */
     static void multiplicate(double num1, double num2, double num3) {
         double result;
-        
-        Scanner S = new Scanner(System.in);
 
-        System.out.println("Iveskite pirma skaiciu.");
-        num3 = S.nextDouble();
-        
         result = num1 * num2 * num3;
 
         System.out.println(num1 + " * " + num2 + " * " + num3 + " = " + result);
