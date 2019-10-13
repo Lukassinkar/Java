@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Calculator {
 
     public static void main(String[] args) {
         double num1, num2, num3, result;
@@ -11,12 +11,12 @@ public class Main {
 
         do {
             Scanner S = new Scanner(System.in);
+            System.out.println("Iveskite simboli.");
+            symbol = S.next().charAt(0);
             System.out.println("Iveskite pirma skaiciu.");
             num1 = S.nextDouble();
             System.out.println("Iveskite antra skaiciu.");
             num2 = S.nextDouble();
-            System.out.println("Iveskite simboli.");
-            symbol = S.next().charAt(0);
 
             switch (symbol) {
                 case '+':
@@ -25,7 +25,7 @@ public class Main {
                     break;
                 case '-':
                     result = substract();
-                    System.out.println(num1 + " - " + num2 + " = " + result);;
+                    System.out.println(num1 + " - " + num2 + " = " + result);
                     break;
                 case '*':
                     multiplicate(num1, num2);
@@ -68,13 +68,11 @@ public class Main {
     }
 
     /**
-     * Atimtis tarp dvieju skaiciu
+     * Atimtis tarp dvieju skaiciu, funkcija be parametru
      *
-     * @param num1 - pirmas skaicius
-     * @param num2 - antras skaicius
      * @return dvieju skaiciu skirtumas
      */
-    static double substract() {
+    private static double substract() {
         double num1, num2, result;
 
         Scanner S = new Scanner(System.in);
@@ -95,20 +93,14 @@ public class Main {
      * @param num2 - antras skaicius
      * @return dvieju skaiciu suma
      */
-    static double add(double num1, double num2) {
-        double result = num1 + num2;
-
-        return result;
+    private static double add(double num1, double num2) {
+        return num1 + num2;
     }
 
     /**
-     * Dalyba tarp dvieju skaiciu
-     *
-     * @param num1 - pirmas skaicius
-     * @param num2 - antras skaicius
-     * @return dvieju skaiciu dalmuo
+     * Dalyba tarp dvieju skaiciu, funkcija be parametru, funkcija negrazina reiksmes
      */
-    static void divide() {
+    private static void divide() {
         double num1, num2;
         double result;
 
@@ -124,27 +116,25 @@ public class Main {
     }
 
     /**
-     * Daugyba tarp dvieju skaiciu
+     * Daugyba tarp dvieju skaiciu, funkcija negrazina reiksmes
      *
      * @param num1 - pirmas skaicius
      * @param num2 - antras skaicius
-     * @return dvieju skaiciu sandauga
      */
-    static void multiplicate(double num1, double num2) {
+    private static void multiplicate(double num1, double num2) {
         double result = num1 * num2;
 
         System.out.println(num1 + " * " + num2 + " = " + result);
     }
 
     /**
-     * Daugyba tarp dvieju skaiciu
+     * Daugyba tarp triju skaiciu, funkcija negrazina reiksmes
      *
      * @param num1 - pirmas skaicius
      * @param num2 - antras skaicius
      * @param num3 - trecias skaicius
-     * @return triju skaiciu sandauga
      */
-    static void multiplicate(double num1, double num2, double num3) {
+    private static void multiplicate(double num1, double num2, double num3) {
         double result;
 
         result = num1 * num2 * num3;
